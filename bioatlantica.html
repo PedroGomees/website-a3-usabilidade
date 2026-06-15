@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BioAtlântica — Portal educativo e jogo 3D interativo para explorar e aprender sobre a Mata Atlântica.">
+    <title>BioAtlântica — Explore, Aprenda, Preserve</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Folha de Estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho / Navegação -->
+    <header id="cabecalho">
+        <div class="container header-inner">
+            <a href="#inicio" class="logo">
+                <i class="fa-solid fa-leaf"></i>
+                Bio<span>Atlântica</span>
+            </a>
+
+            <button id="btn-menu" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#inicio"    class="nav-link ativo">Início</a></li>
+                    <li><a href="#problema"  class="nav-link">O Problema</a></li>
+                    <li><a href="#o-jogo"    class="nav-link">O Jogo</a></li>
+                    <li><a href="#quiz"      class="nav-link">Quiz</a></li>
+                    <li><a href="#galeria"   class="nav-link">Galeria</a></li>
+                    <li><a href="index.html" class="nav-link" title="Voltar ao Portal"><i class="fa-solid fa-house"></i> Portal</a></li>
+                    <li><a href="oceanecho.html" class="nav-link" style="background: #2d8653; padding: 6px 12px; border-radius: 20px; color: #fff; border-bottom: none;" title="Mudar para OceanEcho"><i class="fa-solid fa-water"></i> OceanEcho</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero — Landing Page do Jogo -->
+        <section id="inicio" class="hero">
+            <div class="hero-overlay"></div>
+            <div class="container hero-conteudo">
+                <span class="hero-plataforma">
+                    <i class="fa-solid fa-gamepad"></i> WebGL · Disponível no Navegador
+                </span>
+                <h1>Explore a Mata Atlântica.<br>Aprenda como Biólogo.</h1>
+                <p class="hero-desc">
+                    Um portal educativo com jogo 3D imersivo: assuma o papel de um biólogo, atravesse florestas densas, cruze rios e pontes, e catalogue espécies reais da Mata Atlântica em tempo real.
+                </p>
+                <div class="hero-botoes">
+                    <a href="#o-jogo" class="btn btn-primario">
+                        <i class="fa-solid fa-play"></i> Ver o Jogo
+                    </a>
+                    <a href="#problema" class="btn btn-contorno">Saiba Mais</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Estatísticas de Impacto -->
+        <section class="secao-stats">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <span class="stat-numero">12%</span>
+                    <p>Da Mata Atlântica original ainda existe hoje.</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-numero">+70%</span>
+                    <p>Das espécies ameaçadas do Brasil vivem neste bioma.</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-numero">8.000+</span>
+                    <p>Espécies vegetais endêmicas — encontradas só aqui.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- O Problema -->
+        <section id="problema" class="secao-problema">
+            <div class="container">
+                <div class="secao-titulo">
+                    <h2>O Problema no Ensino de Ecologia</h2>
+                    <p>O ensino de preservação ambiental ainda depende de métodos passivos, gerando baixo engajamento e dificuldade em visualizar a real escala da biodiversidade.</p>
+                </div>
+
+                <div class="problema-layout">
+                    <article class="card-problema">
+                        <div class="icone-problema">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h3>Métodos Passivos</h3>
+                        <p>Livros didáticos e vídeos estáticos não conseguem transmitir a escala e a dinâmica real de biomas como a Mata Atlântica, resultando em pouca retenção de conhecimento.</p>
+                    </article>
+
+                    <article class="card-problema">
+                        <div class="icone-problema">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3>Falta de Engajamento</h3>
+                        <p>Sem interatividade, os alunos têm dificuldade de se conectar com a urgência da preservação ambiental — um tema que exige empatia e visualização ativa.</p>
+                    </article>
+
+                    <article class="card-problema">
+                        <div class="icone-problema">
+                            <i class="fa-solid fa-puzzle-piece"></i>
+                        </div>
+                        <h3>Alternativas Complexas</h3>
+                        <p>Simuladores de ecossistemas existentes são excessivamente complexos e pouco intuitivos para estudantes do ensino fundamental e médio.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- O Jogo -->
+        <section id="o-jogo" class="secao-jogo">
+            <div class="container">
+                <div class="secao-titulo">
+                    <h2>Nossa Solução: BioAtlântica — O Explorador</h2>
+                    <p>Um jogo 3D desenvolvido em Unity 6 e exportado via WebGL para rodar diretamente no navegador, transformando a aprendizagem numa experiência ativa.</p>
+                </div>
+
+                <div class="jogo-layout">
+                    <!-- Screenshot fictício do jogo -->
+                    <div class="jogo-screenshot">
+                        <!--
+                            Imagem CC0 de floresta tropical — Pexels (licença gratuita)
+                            Representa o ambiente 3D explorado no jogo
+                        -->
+                        <img
+                            src="https://images.pexels.com/photos/1179229/pexels-photo-1179229.jpeg?auto=compress&cs=tinysrgb&w=900&q=80"
+                            alt="Ambiente 3D de floresta densa — representação do jogo BioAtlântica">
+                        <div class="screenshot-hud">
+                            <span class="hud-item"><i class="fa-solid fa-flask"></i> Amostras: 07</span>
+                            <span class="hud-item"><i class="fa-solid fa-map-location-dot"></i> Zona 2 — Rio Claro</span>
+                        </div>
+                    </div>
+
+                    <!-- Descrição e features -->
+                    <div class="jogo-descricao">
+                        <h3>Como funciona?</h3>
+                        <p>O jogador assume o papel de um biólogo e mergulha numa floresta densa e realista. O objetivo é explorar o ambiente, identificar espécies e construir um catálogo científico, tudo dentro de um tempo de missão.</p>
+
+                        <ul class="lista-features">
+                            <li>
+                                <i class="fa-solid fa-tree"></i>
+                                <div>
+                                    <strong>Exploração 3D livre</strong>
+                                    <span>Atravesse florestas densas, rios e pontes suspensas em um ambiente gerado com biomas reais.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-microscope"></i>
+                                <div>
+                                    <strong>Catálogo de espécies</strong>
+                                    <span>Identifique e registre espécies reais da Mata Atlântica com dados científicos reais.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-brain"></i>
+                                <div>
+                                    <strong>Quizzes integrados</strong>
+                                    <span>A cada espécie encontrada, um mini-quiz testa o conhecimento do jogador em tempo real.</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-trophy"></i>
+                                <div>
+                                    <strong>Sistema de conquistas</strong>
+                                    <span>Amostras coletadas e pontuação são os indicadores de progresso e retenção de conhecimento.</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vídeo CC0 -->
+        <section id="video" class="secao-video">
+            <div class="container">
+                <div class="secao-titulo">
+                    <h2>Conheça a Mata Atlântica</h2>
+                    <p>Antes de explorar o jogo, veja a realidade do bioma que inspirou o projeto.</p>
+                </div>
+                <div class="video-wrapper">
+                    <!--
+                        Vídeo de domínio público / uso educacional
+                        Documentário sobre a Mata Atlântica — Fonte pública (YouTube)
+                    -->
+                    <iframe
+                        src="https://www.youtube.com/embed/2K4gMiGTgbQ"
+                        title="Mata Atlântica — Documentário educativo"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <p class="credito-midia">Vídeo: Conteúdo de uso educacional livre — Fonte pública no YouTube</p>
+            </div>
+        </section>
+
+        <!-- Quiz Interativo -->
+        <section id="quiz" class="secao-quiz">
+            <div class="container">
+                <div class="secao-titulo">
+                    <h2>Teste Seu Conhecimento</h2>
+                    <p>Este quiz funciona como um dos indicadores de resultado do nosso projeto: mede a retenção de conhecimento sobre a fauna e flora da Mata Atlântica.</p>
+                </div>
+
+                <div class="quiz-wrapper">
+                    <!-- Painel de progresso -->
+                    <div class="quiz-topo">
+                        <span id="quiz-progresso">Pergunta 1 de 5</span>
+                        <span id="quiz-placar">Pontuação: 0</span>
+                    </div>
+
+                    <!-- Pergunta -->
+                    <div id="quiz-area">
+                        <p id="quiz-pergunta" class="quiz-pergunta">Carregando pergunta...</p>
+                        <div id="quiz-opcoes" class="quiz-opcoes"></div>
+                        <div id="quiz-feedback" class="quiz-feedback oculto">
+                            <p id="feedback-texto"></p>
+                        </div>
+                        <button id="btn-proxima" class="btn btn-primario oculto">
+                            Próxima Pergunta <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                    <!-- Resultado final (oculto até terminar) -->
+                    <div id="quiz-resultado" class="quiz-resultado oculto">
+                        <i class="fa-solid fa-award icone-resultado"></i>
+                        <h3 id="resultado-titulo"></h3>
+                        <p class="resultado-placar">Você acertou <strong id="resultado-acertos"></strong> de <strong>5</strong> perguntas.</p>
+                        <p id="resultado-msg"></p>
+                        <button id="btn-reiniciar" class="btn btn-primario">
+                            <i class="fa-solid fa-rotate-right"></i> Tentar Novamente
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria CC0 -->
+        <section id="galeria" class="secao-galeria">
+            <div class="container">
+                <div class="secao-titulo">
+                    <h2>Espécies em Foco</h2>
+                    <p>Imagens de uso livre (CC0) que mostram a riqueza e a fragilidade da Mata Atlântica.</p>
+                </div>
+
+                <div class="galeria-grid">
+                    <figure class="foto-item">
+                        <!--
+                            Foto CC0: floresta tropical densa
+                            Fonte: Pexels (licença gratuita)
+                        -->
+                        <img
+                            src="https://images.pexels.com/photos/1029624/pexels-photo-1029624.jpeg?auto=compress&cs=tinysrgb&w=800&q=80"
+                            alt="Floresta tropical densa com dossel alto e vegetação exuberante"
+                            loading="lazy">
+                        <figcaption>
+                            <h4>Floresta Densa</h4>
+                            <p>O interior da Mata Atlântica abriga múltiplos extratos de vegetação.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="foto-item">
+                        <!--
+                            Foto CC0: macaco/primata em árvore
+                            Fonte: Pexels (licença gratuita)
+                        -->
+                        <img
+                            src="https://images.pexels.com/photos/145083/pexels-photo-145083.jpeg?auto=compress&cs=tinysrgb&w=800&q=80"
+                            alt="Primata em galho de árvore na floresta"
+                            loading="lazy">
+                        <figcaption>
+                            <h4>Primatas Endêmicos</h4>
+                            <p>O mico-leão-dourado é símbolo e espécie-bandeira da preservação.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="foto-item">
+                        <!--
+                            Foto CC0: papagaio / arara colorida
+                            Fonte: Pexels (licença gratuita)
+                        -->
+                        <img
+                            src="https://images.pexels.com/photos/46252/pexels-photo-46252.jpeg?auto=compress&cs=tinysrgb&w=800&q=80"
+                            alt="Ave colorida com plumagem verde e vermelha pousada em galho"
+                            loading="lazy">
+                        <figcaption>
+                            <h4>Avifauna Rica</h4>
+                            <p>Mais de 1.000 espécies de aves habitam a Mata Atlântica.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <p class="credito-midia">Fotos: Pexels.com — Licença gratuita (CC0 / uso livre sem atribuição obrigatória)</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer id="rodape">
+        <div class="container footer-inner">
+            <div class="footer-marca">
+                <p class="logo"><i class="fa-solid fa-leaf"></i> Bio<span>Atlântica</span></p>
+                <p>Portal educativo desenvolvido como projeto acadêmico para promover o ensino interativo sobre a Mata Atlântica.</p>
+            </div>
+
+            <div class="footer-info">
+                <h4>Projeto Acadêmico</h4>
+                <p><strong>Disciplina:</strong> Usabilidade e Design Web</p>
+                <p><strong>Universidade:</strong> IBMR, 2026/1</p>
+                <p><strong>Professores:</strong> Flávia Balbino e Rogério Pinheiro</p>
+            </div>
+
+            <div class="footer-alunos">
+                <h4>Desenvolvido por Aluno</h4>
+                <ul>
+                    <li>Raffos (RA: 12623191)</li>
+                    <li>Pablo Gomide (RA: 12625124922)</li>
+                    <li>Pedro Gomes (RA: 1262328800)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-base">
+            <div class="container">
+                <p>&copy; 2026 BioAtlântica. Projeto educacional, imagens e vídeos CC0 de uso livre.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

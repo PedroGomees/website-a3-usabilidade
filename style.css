@@ -1,0 +1,820 @@
+/* ============================================================
+   Variáveis e Reset
+   ============================================================ */
+:root {
+    --verde-escuro:  #1a4d2e;
+    --verde-medio:   #2d8653;
+    --verde-claro:   #52b788;
+    --verde-palido:  #d8f3dc;
+    --dourado:       #e9a028;
+    --dourado-claro: #fff3cd;
+    --fundo:         #f4f9f4;
+    --fundo-branco:  #ffffff;
+    --texto:         #1a2e1a;
+    --texto-suave:   #4a6741;
+    --borda:         #c3e6cb;
+    --sombra:        0 4px 16px rgba(45, 134, 83, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+}
+
+/* ============================================================
+   Container
+   ============================================================ */
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ============================================================
+   Botões
+   ============================================================ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: background-color 0.25s, color 0.25s, transform 0.2s;
+}
+
+.btn-primario {
+    background-color: var(--verde-medio);
+    color: #fff;
+}
+
+.btn-primario:hover {
+    background-color: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+.btn-contorno {
+    background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+.btn-contorno:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.btn-bloco {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+/* ============================================================
+   Cabeçalho
+   ============================================================ */
+#cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--verde-escuro);
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo span {
+    color: var(--verde-claro);
+}
+
+.logo i {
+    color: var(--verde-claro);
+}
+
+#btn-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+    padding: 4px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-link:hover,
+.nav-link.ativo {
+    color: var(--verde-claro);
+    border-bottom-color: var(--verde-claro);
+}
+
+/* ============================================================
+   Hero — Game Landing Page
+   ============================================================ */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 70px;
+    /* Foto CC0 de floresta tropical — Pexels (licença gratuita) */
+    background: url('https://images.pexels.com/photos/957024/pexels-photo-957024.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80')
+                no-repeat center center / cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(26, 77, 46, 0.82) 0%,
+        rgba(26, 77, 46, 0.65) 100%
+    );
+}
+
+.hero-conteudo {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    color: #fff;
+}
+
+.hero-plataforma {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--dourado);
+    color: var(--verde-escuro);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-conteudo h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+    opacity: 0.9;
+    max-width: 580px;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+/* ============================================================
+   Estatísticas
+   ============================================================ */
+.secao-stats {
+    background-color: var(--verde-escuro);
+    padding: 50px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-item {
+    color: #fff;
+}
+
+.stat-numero {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dourado);
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+/* ============================================================
+   Título de Seção
+   ============================================================ */
+.secao-titulo {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 50px;
+}
+
+.secao-titulo h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--verde-escuro);
+    margin-bottom: 12px;
+}
+
+.secao-titulo p {
+    color: var(--texto-suave);
+    font-size: 1rem;
+}
+
+/* ============================================================
+   O Problema
+   ============================================================ */
+.secao-problema {
+    padding: 80px 0;
+    background-color: var(--fundo-branco);
+}
+
+.problema-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.card-problema {
+    background-color: var(--fundo);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 28px;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.card-problema:hover {
+    box-shadow: var(--sombra);
+    transform: translateY(-4px);
+}
+
+.icone-problema {
+    width: 52px;
+    height: 52px;
+    border-radius: 8px;
+    background-color: var(--verde-palido);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    color: var(--verde-medio);
+    margin-bottom: 16px;
+}
+
+.card-problema h3 {
+    font-size: 1.1rem;
+    color: var(--verde-escuro);
+    margin-bottom: 10px;
+}
+
+.card-problema p {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+}
+
+/* ============================================================
+   O Jogo
+   ============================================================ */
+.secao-jogo {
+    padding: 80px 0;
+    background-color: var(--fundo);
+}
+
+.jogo-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.jogo-screenshot {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 3px solid var(--verde-medio);
+    box-shadow: 0 8px 30px rgba(26, 77, 46, 0.2);
+}
+
+.jogo-screenshot img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+/* HUD fictício sobre a imagem */
+.screenshot-hud {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 14px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.hud-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(0,0,0,0.4);
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.jogo-descricao h3 {
+    font-size: 1.4rem;
+    color: var(--verde-escuro);
+    margin-bottom: 12px;
+}
+
+.jogo-descricao > p {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+.lista-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.lista-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.lista-features li > i {
+    width: 40px;
+    height: 40px;
+    background-color: var(--verde-palido);
+    color: var(--verde-medio);
+    font-size: 1.1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.lista-features li div {
+    display: flex;
+    flex-direction: column;
+}
+
+.lista-features li strong {
+    color: var(--verde-escuro);
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.lista-features li span {
+    color: var(--texto-suave);
+    font-size: 0.85rem;
+}
+
+/* ============================================================
+   Seção de Vídeo
+   ============================================================ */
+.secao-video {
+    padding: 80px 0;
+    background-color: var(--verde-escuro);
+}
+
+.secao-video .secao-titulo h2 {
+    color: #fff;
+}
+
+.secao-video .secao-titulo p {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid var(--verde-claro);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.credito-midia {
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 14px;
+}
+
+.secao-galeria .credito-midia {
+    color: var(--texto-suave);
+}
+
+/* ============================================================
+   Quiz Interativo
+   ============================================================ */
+.secao-quiz {
+    padding: 80px 0;
+    background-color: var(--fundo-branco);
+}
+
+.quiz-wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: var(--fundo);
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 36px;
+}
+
+.quiz-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+}
+
+#quiz-placar {
+    color: var(--verde-medio);
+}
+
+.quiz-pergunta {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--verde-escuro);
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.quiz-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.opcao-btn {
+    background-color: var(--fundo-branco);
+    border: 2px solid var(--borda);
+    border-radius: 8px;
+    padding: 12px 18px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    color: var(--texto);
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.opcao-btn:hover:not(:disabled) {
+    border-color: var(--verde-medio);
+    background-color: var(--verde-palido);
+}
+
+.opcao-btn.correta {
+    border-color: var(--verde-medio);
+    background-color: var(--verde-palido);
+    color: var(--verde-escuro);
+    font-weight: 600;
+}
+
+.opcao-btn.errada {
+    border-color: #dc3545;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.quiz-feedback {
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+    border-left: 4px solid var(--verde-medio);
+    background-color: var(--verde-palido);
+    color: var(--verde-escuro);
+}
+
+.quiz-feedback.oculto {
+    display: none;
+}
+
+.quiz-feedback.feedback-erro {
+    border-color: #dc3545;
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+#btn-proxima.oculto {
+    display: none;
+}
+
+/* Resultado final */
+.quiz-resultado {
+    text-align: center;
+    padding: 20px 0;
+    animation: surgir 0.4s ease;
+}
+
+.quiz-resultado.oculto {
+    display: none;
+}
+
+.icone-resultado {
+    font-size: 3rem;
+    color: var(--dourado);
+    margin-bottom: 16px;
+}
+
+.quiz-resultado h3 {
+    font-size: 1.6rem;
+    color: var(--verde-escuro);
+    margin-bottom: 12px;
+}
+
+.resultado-placar {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.resultado-placar strong {
+    color: var(--verde-medio);
+}
+
+#resultado-msg {
+    font-size: 0.9rem;
+    color: var(--texto-suave);
+    margin-bottom: 24px;
+}
+
+/* ============================================================
+   Galeria
+   ============================================================ */
+.secao-galeria {
+    padding: 80px 0;
+    background-color: var(--fundo);
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 12px;
+}
+
+.foto-item {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    background-color: var(--fundo-branco);
+    box-shadow: var(--sombra);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.foto-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(45, 134, 83, 0.15);
+}
+
+.foto-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.foto-item:hover img {
+    transform: scale(1.04);
+}
+
+.foto-item figcaption {
+    padding: 16px 18px;
+}
+
+.foto-item figcaption h4 {
+    font-size: 1rem;
+    color: var(--verde-escuro);
+    margin-bottom: 4px;
+}
+
+.foto-item figcaption p {
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+}
+
+/* ============================================================
+   Rodapé
+   ============================================================ */
+#rodape {
+    background-color: var(--verde-escuro);
+    color: rgba(255, 255, 255, 0.85);
+    padding: 60px 0 0;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-marca .logo {
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+}
+
+.footer-marca p:not(.logo) {
+    font-size: 0.9rem;
+    opacity: 0.75;
+    max-width: 300px;
+}
+
+.footer-info h4,
+.footer-alunos h4 {
+    color: var(--verde-claro);
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+.footer-info p {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    opacity: 0.8;
+}
+
+.footer-alunos ul {
+    list-style: none;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.footer-alunos ul li {
+    margin-bottom: 6px;
+}
+
+.footer-base {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 18px 0;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+/* ============================================================
+   Animação
+   ============================================================ */
+@keyframes surgir {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   Responsividade
+   ============================================================ */
+@media (max-width: 900px) {
+    .jogo-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    #btn-menu {
+        display: block;
+    }
+
+    #navbar {
+        display: none;
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 240px;
+        height: calc(100vh - 70px);
+        background-color: var(--verde-escuro);
+        padding: 30px;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 99;
+    }
+
+    #navbar.aberto {
+        display: block;
+    }
+
+    #navbar ul {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hero-conteudo {
+        text-align: center;
+    }
+
+    .hero-botoes {
+        justify-content: center;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .quiz-wrapper {
+        padding: 24px 18px;
+    }
+
+    .quiz-topo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-botoes {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

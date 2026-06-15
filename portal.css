@@ -1,0 +1,368 @@
+/* ============================================================
+   Design Tokens & Reset
+   ============================================================ */
+:root {
+    --forest-primary: #1a4d2e;
+    --forest-accent: #52b788;
+    --forest-bright: #2d8653;
+    --ocean-primary: #060b13;
+    --ocean-accent: #00f2fe;
+    --ocean-bright: #4facfe;
+    --text-light: #f5f6fa;
+    --text-muted: #a0aec0;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --font-outfit: 'Outfit', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #060b13;
+    color: var(--text-light);
+    font-family: var(--font-outfit);
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================================
+   Layout
+   ============================================================ */
+.portal-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================================
+   Portal Header & Typography
+   ============================================================ */
+.portal-header {
+    text-align: center;
+    padding: 30px 20px 20px;
+    z-index: 10;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(6, 11, 19, 0.95) 40%, rgba(6, 11, 19, 0));
+}
+
+.academic-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.portal-main-title {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-family: var(--font-poppins);
+    font-weight: 800;
+    margin-bottom: 6px;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, #ffffff, #c7d2fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.portal-subtitle {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* ============================================================
+   Split Screen Wrapper & Animations
+   ============================================================ */
+.split-wrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.split-side {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-light);
+    overflow: hidden;
+    transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.split-side .bg-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), filter 0.8s;
+    filter: scale(1.02) grayscale(20%) brightness(0.65);
+}
+
+/* Background Images for Themes */
+.split-side.forest .bg-image {
+    background-image: url('https://images.pexels.com/photos/957024/pexels-photo-957024.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80');
+}
+
+.split-side.ocean .bg-image {
+    background-image: url('https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?auto=format&fit=crop&w=1200&q=80');
+}
+
+.split-side .overlay {
+    position: absolute;
+    inset: 0;
+    transition: background 0.6s ease;
+}
+
+.split-side.forest .overlay {
+    background: linear-gradient(to right, rgba(26, 77, 46, 0.75), rgba(6, 11, 19, 0.65));
+}
+
+.split-side.ocean .overlay {
+    background: linear-gradient(to left, rgba(6, 11, 19, 0.85), rgba(11, 21, 35, 0.65));
+}
+
+/* ============================================================
+   Hover Interactions
+   ============================================================ */
+.split-side:hover {
+    flex: 1.35;
+}
+
+.split-side:hover .bg-image {
+    transform: scale(1.08);
+    filter: grayscale(0%) brightness(0.85);
+}
+
+/* Custom Overlays on Hover */
+.split-side.forest:hover .overlay {
+    background: linear-gradient(to bottom, rgba(26, 77, 46, 0.85) 0%, rgba(26, 77, 46, 0.5) 100%);
+}
+
+.split-side.ocean:hover .overlay {
+    background: linear-gradient(to bottom, rgba(11, 21, 35, 0.9) 0%, rgba(6, 11, 19, 0.5) 100%);
+}
+
+/* ============================================================
+   Side Contents & Glassmorphic Cards
+   ============================================================ */
+.side-content {
+    position: relative;
+    z-index: 5;
+    max-width: 480px;
+    padding: 40px;
+    margin: 100px 20px 20px;
+    border-radius: 20px;
+    background: rgba(6, 11, 19, 0.35);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.6s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.split-side:hover .side-content {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.split-side.forest:hover .side-content {
+    border-color: rgba(82, 183, 136, 0.3);
+    box-shadow: 0 15px 40px rgba(26, 77, 46, 0.3);
+}
+
+.split-side.ocean:hover .side-content {
+    border-color: rgba(0, 242, 254, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 242, 254, 0.25);
+}
+
+/* Icon Badges */
+.icon-badge {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.forest .icon-badge {
+    background: rgba(82, 183, 136, 0.1);
+    color: var(--forest-accent);
+    border: 1px solid rgba(82, 183, 136, 0.2);
+}
+
+.ocean .icon-badge {
+    background: rgba(0, 242, 254, 0.1);
+    color: var(--ocean-accent);
+    border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.split-side:hover .icon-badge {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Categories, Titles, & Descriptions */
+.side-category {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.forest .side-category {
+    color: var(--forest-accent);
+}
+
+.ocean .side-category {
+    color: var(--ocean-accent);
+}
+
+.side-title {
+    font-family: var(--font-poppins);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.forest .side-title span {
+    color: var(--forest-accent);
+}
+
+.ocean .side-title span {
+    background: linear-gradient(135deg, var(--ocean-bright), var(--ocean-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.side-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Buttons */
+.btn-portal {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 30px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+    cursor: pointer;
+    font-family: var(--font-poppins);
+    border: 1px solid transparent;
+}
+
+.btn-forest {
+    background: var(--forest-bright);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(45, 134, 83, 0.25);
+}
+
+.btn-forest:hover {
+    background: var(--forest-accent);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(82, 183, 136, 0.4);
+}
+
+.btn-ocean {
+    background: linear-gradient(135deg, var(--ocean-bright), var(--ocean-accent));
+    color: var(--ocean-primary);
+    box-shadow: 0 4px 15px rgba(0, 242, 254, 0.25);
+}
+
+.btn-ocean:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 242, 254, 0.45);
+}
+
+/* ============================================================
+   Portal Footer
+   ============================================================ */
+.portal-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    z-index: 10;
+    pointer-events: none;
+    background: linear-gradient(to top, rgba(6, 11, 19, 0.95) 40%, rgba(6, 11, 19, 0));
+}
+
+/* ============================================================
+   Media Queries & Responsiveness
+   ============================================================ */
+@media (max-width: 900px) {
+    .split-wrapper {
+        flex-direction: column;
+    }
+
+    .split-side {
+        width: 100%;
+        min-height: 50vh;
+    }
+
+    .split-side:hover {
+        flex: 1.15;
+    }
+
+    .side-content {
+        margin: 110px 20px 80px;
+        padding: 25px;
+    }
+
+    .portal-header {
+        position: relative;
+        background: #060b13;
+        padding-bottom: 20px;
+    }
+
+    .portal-footer {
+        position: relative;
+        background: #060b13;
+        padding: 20px;
+    }
+}

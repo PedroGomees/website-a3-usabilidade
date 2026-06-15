@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal de Conscientização Ecológica - Escolha entre explorar a Mata Atlântica ou o impacto humano nos oceanos.">
+    <title>Portal Ecológico — Explore & Preserve</title>
+    <!-- Google Fonts: Outfit & Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS for Portal Page -->
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+
+    <main class="portal-container">
+        
+        <!-- Portal Center Header Badge -->
+        <header class="portal-header">
+            <div class="academic-badge">
+                <span>IBMR · Usabilidade e Design Web</span>
+            </div>
+            <h1 class="portal-main-title">Preservação Ambiental</h1>
+            <p class="portal-subtitle">Escolha um ecossistema para iniciar a exploração interativa</p>
+        </header>
+
+        <!-- Split Screen Wrapper -->
+        <div class="split-wrapper">
+            
+            <!-- Left Side: BioAtlântica (Forest) -->
+            <a href="bioatlantica.html" class="split-side forest" id="side-forest">
+                <div class="bg-image"></div>
+                <div class="overlay"></div>
+                <div class="side-content">
+                    <div class="icon-badge">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <span class="side-category">Mata Atlântica</span>
+                    <h2 class="side-title">Bio<span>Atlântica</span></h2>
+                    <p class="side-description">
+                        Entre na floresta tropical. Assuma o papel de um biólogo, catalogue espécies em tempo real e teste seus conhecimentos com quizzes.
+                    </p>
+                    <span class="btn-portal btn-forest">
+                        Explorar Floresta <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+            </a>
+
+            <!-- Right Side: OceanEcho (Ocean) -->
+            <a href="oceanecho.html" class="split-side ocean" id="side-ocean">
+                <div class="bg-image"></div>
+                <div class="overlay"></div>
+                <div class="side-content">
+                    <div class="icon-badge">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <span class="side-category">Oceanos e Costas</span>
+                    <h2 class="side-title">Ocean<span>Echo</span></h2>
+                    <p class="side-description">
+                        Ouça o eco das profundezas. Descubra as ameaças marinhas, calcule a sua pegada ecológica e analise o descarte de plástico.
+                    </p>
+                    <span class="btn-portal btn-ocean">
+                        Explorar Oceanos <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Integrated Footer -->
+        <footer class="portal-footer">
+            <p>&copy; 2026 Portal de Usabilidade e Design Web (IBMR). Desenvolvido por Aluno: Raffos (RA: 12623191), Pablo Gomide (RA: 12625124922) e Pedro Gomes (RA: 1262328800)</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="OceanEcho - Descubra o impacto humano nos oceanos e calcule a sua pegada ecológica marinha.">
+    <title>OceanEcho - Consciência e Preservação dos Oceanos</title>
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style_oceanecho.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#" class="logo" id="logo-anchor">
+                <i class="fa-solid fa-water-ladder logo-icon"></i>
+                <span>Ocean<span>Echo</span></span>
+            </a>
+            
+            <button class="menu-toggle" id="menu-toggle-btn" aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="navbar" id="navbar-nav">
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link active">Início</a></li>
+                    <li><a href="#sobre" class="nav-link">Desafios</a></li>
+                    <li><a href="#impacto" class="nav-link">Calculadora</a></li>
+                    <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="index.html" class="nav-link" title="Voltar ao Portal"><i class="fa-solid fa-house"></i> Portal</a></li>
+                    <li><a href="bioatlantica.html" class="nav-link" style="background: linear-gradient(135deg, var(--primary-blue), var(--primary-cyan)); padding: 6px 16px; border-radius: 20px; color: var(--bg-dark); box-shadow: 0 4px 10px rgba(0, 242, 254, 0.2);" title="Mudar para BioAtlântica"><i class="fa-solid fa-leaf"></i> BioAtlântica</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <span class="hero-subtitle">Década do Oceano da ONU</span>
+                <h1 class="hero-title">O Eco que Vem das Profundezas</h1>
+                <p class="hero-text">
+                    Nossas águas cobrem 70% do planeta, produzem metade do oxigênio que respiramos e regulam o clima global. Cada ação nossa reverbera no mar. Qual é o seu eco?
+                </p>
+                <div class="hero-buttons">
+                    <a href="#impacto" class="btn btn-primary" id="btn-calc-hero">Calcule Seu Impacto</a>
+                    <a href="#sobre" class="btn btn-outline" id="btn-learn-hero">Saiba Mais</a>
+                </div>
+            </div>
+            <div class="wave-separator">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Stats Counter Section -->
+        <section class="stats-section">
+            <div class="container stats-grid">
+                <div class="stat-card">
+                    <h3 class="stat-number">8M</h3>
+                    <p class="stat-desc">Toneladas de plástico despejadas nos oceanos anualmente.</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">50%</h3>
+                    <p class="stat-desc">Do oxigênio do planeta gerado pelo fitoplâncton marinho.</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number">90%</h3>
+                    <p class="stat-desc">Do calor gerado pelos gases estufa absorvido pelos oceanos.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Threat Grid & Info Section (Semantic Box Tags) -->
+        <section id="sobre" class="info-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>As Três Grandes Ameaças</h2>
+                    <p>Entenda como a atividade humana está desequilibrando os ecossistemas marinhos mais vitais.</p>
+                </div>
+
+                <div class="info-layout">
+                    <!-- Main Articles Grid -->
+                    <div class="articles-grid">
+                        <article class="card article-card">
+                            <div class="card-icon"><i class="fa-solid fa-fire-flame-simple"></i></div>
+                            <h3>Aquecimento & Acidificação</h3>
+                            <p>O excesso de CO2 na atmosfera eleva a temperatura das águas e altera o pH do oceano. Isso causa o branqueamento e morte em massa de recifes de coral, colapsando a biodiversidade local.</p>
+                        </article>
+
+                        <article class="card article-card">
+                            <div class="card-icon"><i class="fa-solid fa-dumpster"></i></div>
+                            <h3>Poluição por Plásticos</h3>
+                            <p>Garrafas, sacolas e microplásticos formam ilhas gigantes de lixo em giros oceânicos. Animais confundem esses resíduos com comida, levando a lesões físicas, contaminação química e sufocamento.</p>
+                        </article>
+
+                        <article class="card article-card">
+                            <div class="card-icon"><i class="fa-solid fa-ship"></i></div>
+                            <h3>Sobrepesca Predatória</h3>
+                            <p>A pesca industrial sem controle retira espécies marinhas em velocidade superior à sua capacidade de reprodução. Redes de arrasto destroem o leito marinho, capturando golfinhos, tartarugas e corais por acidente.</p>
+                        </article>
+                    </div>
+
+                    <!-- Aside Info Box (Glassmorphic sidebar) -->
+                    <aside class="card info-sidebar">
+                        <h3><i class="fa-solid fa-circle-info sidebar-icon"></i> Você sabia?</h3>
+                        <ul class="sidebar-list">
+                            <li>Até 2050, cientistas estimam que poderá haver mais plástico do que peixes nos oceanos em termos de peso.</li>
+                            <li>Os corais cobrem menos de 0.1% do oceano, mas abrigam mais de 25% de toda a vida marinha conhecida.</li>
+                            <li>A Fossa das Marianas, o ponto mais profundo da Terra, já contém registros de poluição por microplásticos.</li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Javascript Section (Calculadora de Impacto) -->
+        <section id="impacto" class="calculator-section">
+            <div class="container">
+                <div class="calculator-wrapper card">
+                    <div class="calculator-info">
+                        <h2>Sua Pegada de Plástico Marinho</h2>
+                        <p>O plástico de uso único consome recursos fósseis e, em grande parte, acaba poluindo nossos estuários e oceanos. Calcule o seu descarte estimado anual e veja como melhorar.</p>
+                        <div class="eco-quote">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>Pequenas mudanças diárias, quando multiplicadas por milhões de pessoas, podem regenerar nossos oceanos.</p>
+                        </div>
+                    </div>
+
+                    <form class="calculator-form" id="eco-form" onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <label for="input-copos">Copos/Utensílios plásticos por semana:</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="input-copos" min="0" value="0" required>
+                                <span class="input-suffix">unid</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-sacolas">Sacolas plásticas por semana:</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="input-sacolas" min="0" value="0" required>
+                                <span class="input-suffix">unid</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-garrafas">Garrafas PET por semana:</label>
+                            <div class="input-wrapper">
+                                <input type="number" id="input-garrafas" min="0" value="0" required>
+                                <span class="input-suffix">unid</span>
+                            </div>
+                        </div>
+
+                        <button type="button" class="btn btn-primary btn-block" id="btn-calcular">Calcular Pegada</button>
+
+                        <!-- Results display dynamically loaded via JS -->
+                        <div class="calc-results hidden" id="calc-results">
+                            <div class="divider"></div>
+                            <h4>Resultado Estimado</h4>
+                            <div class="result-number">
+                                <span id="weight-result">0.00</span> <span class="unit">kg / ano</span>
+                            </div>
+                            <div class="rating-badge" id="rating-badge">Impacto Baixo</div>
+                            <p class="tips" id="tips-text">Excelente! Seus hábitos ajudam a preservar os ecossistemas marinhos. Continue assim!</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- CC0 Gallery Section -->
+        <section id="galeria" class="gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Imagens da Vida Oceânica</h2>
+                    <p>Registros livres (CC0) que demonstram a fragilidade e a beleza majestosa do mundo submarino.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1546026423-cc4642628d2b?auto=format&fit=crop&w=600&q=80" alt="Recife de coral saudável sob luz solar" loading="lazy">
+                        <figcaption>
+                            <h4>Recife de Coral Vivo</h4>
+                            <p>Biodiversidade marinha florescendo nos trópicos.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Tartaruga nadando sobre água cristalina" loading="lazy">
+                        <figcaption>
+                            <h4>Tartaruga Verde</h4>
+                            <p>Espécie vulnerável à ingestão de detritos plásticos.</p>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1518156677180-95a2893f3e9f?auto=format&fit=crop&w=600&q=80" alt="Ondas gigantes se quebrando sob o pôr do sol" loading="lazy">
+                        <figcaption>
+                            <h4>Força das Marés</h4>
+                            <p>Correntes que ditam o ciclo climático de todo o planeta.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Segment -->
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <i class="fa-solid fa-water-ladder logo-icon"></i>
+                    <span>Ocean<span>Echo</span></span>
+                </div>
+                <p>Promovendo a conscientização ecológica e ajudando a mitigar a poluição plástica nos oceanos.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Projeto Acadêmico</h4>
+                <p><strong>Disciplina:</strong> Usabilidade e Design Web</p>
+                <p><strong>Universidade:</strong> IBMR, 2026/1</p>
+            </div>
+
+            <div class="footer-group">
+                <h4>Desenvolvido por Aluno</h4>
+                <ul>
+                    <li>Raffos (RA: 12623191)</li>
+                    <li>Pablo Gomide (RA: 12625124922)</li>
+                    <li>Pedro Gomes (RA: 1262328800)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 OceanEcho. Desenvolvido para fins educacionais (recursos CC0 de uso livre).</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript Logic -->
+    <script src="script_oceanecho.js"></script>
+</body>
+</html>
