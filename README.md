@@ -16,10 +16,8 @@ O ensino de ecologia e preservação ambiental é frequentemente limitado a mét
 
 Um **portal web educativo** que apresenta um jogo 3D imersivo: o usuário assume o papel de um biólogo que explora uma floresta densa, atravessa rios e pontes, e cataloga espécies em tempo real, transformando a aprendizagem numa experiência ativa.
 
-| Plataforma | Tecnologia |
-| :--- | :--- |
-| Jogo 3D | Unity 6 (exportação WebGL) |
-| Portal Web | HTML5, CSS3, JavaScript |
+
+Portal Web  HTML5, CSS3, JavaScript 
 
 ---
 
@@ -41,43 +39,6 @@ Um **portal web educativo** que apresenta um jogo 3D imersivo: o usuário assume
 | Verde Pálido | `#d8f3dc` | Fundo de ícones, feedbacks positivos |
 | Dourado Âmbar | `#e9a028` | Badge do hero, números de estatística |
 | Fundo Claro | `#f4f9f4` | Fundo principal das seções |
-
----
-
-## Estrutura Semântica do Site
-
-Seguindo boas práticas de HTML5:
-
-- `<header>`: Cabeçalho com logo e menu de navegação
-- `<nav>`: Menu com rolagem suave para cada seção
-- `<main>`: Conteúdo central do portal
-- `<section>`: Seções temáticas (Hero, Stats, Problema, O Jogo, Vídeo, Quiz, Galeria)
-- `<article>`: Cards individuais dos problemas identificados
-- `<aside>`: (versão original) Painel de curiosidades
-- `<figure>` / `<figcaption>`: Galeria de imagens com legendas
-- `<footer>`: Rodapé com dados do projeto e créditos
-
----
-
-## Seções do Portal
-
-| Seção | Descrição |
-| :--- | :--- |
-| **Hero** | Landing page do jogo com chamada para ação e badge de plataforma WebGL |
-| **Estatísticas** | Dados de impacto sobre a Mata Atlântica (12% restante, +70% espécies ameaçadas, 8.000+ endêmicas) |
-| **O Problema** | 3 cards explicando as falhas do ensino tradicional de ecologia |
-| **O Jogo** | Conceito do jogo com screenshot fictício e lista de funcionalidades |
-| **Vídeo** | Embed de documentário CC0 sobre a Mata Atlântica |
-| **Quiz** | Quiz interativo com 5 perguntas sobre fauna e flora como indicador de retenção de conhecimento |
-| **Galeria** | Fotos CC0 de espécies e paisagens da Mata Atlântica |
-
----
-
-## Indicadores de Resultado
-
-- **Retenção de conhecimento** medida via quiz integrado ao portal
-- **Tempo de exploração** dentro do jogo 3D
-- **Número de amostras biológicas** coletadas pelos jogadores
 
 ---
 
