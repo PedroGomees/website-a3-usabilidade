@@ -28,6 +28,7 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    overflow-x: hidden;
 }
 
 body {
@@ -290,7 +291,7 @@ body {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 30px;
 }
 
@@ -591,7 +592,7 @@ body {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 30px;
 }
 
@@ -727,7 +728,8 @@ body {
     .navbar {
         position: fixed;
         top: 80px;
-        right: -100%;
+        right: 0;
+        transform: translateX(100%);
         width: 280px;
         height: calc(100vh - 80px);
         background: rgba(6, 11, 19, 0.98);
@@ -738,7 +740,7 @@ body {
     }
     
     .navbar.open {
-        right: 0;
+        transform: translateX(0);
     }
     
     .nav-menu {
@@ -768,6 +770,14 @@ body {
         align-self: flex-start;
     }
     
+    .card {
+        padding: 20px;
+    }
+    
+    .calculator-form {
+        padding: 20px;
+    }
+    
     .footer-content {
         grid-template-columns: 1fr;
         gap: 30px;
@@ -782,5 +792,13 @@ body {
     
     .btn {
         width: 100%;
+    }
+    
+    .card {
+        padding: 15px;
+    }
+    
+    .calculator-form {
+        padding: 15px;
     }
 }
