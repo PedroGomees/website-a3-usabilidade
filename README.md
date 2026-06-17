@@ -94,3 +94,22 @@ git push origin feature/nome-da-tarefa
 | `oceanecho.html` | Portal OceanEcho (Oceanos) |
 | `style_oceanecho.css` | Estilos do portal OceanEcho |
 | `script_oceanecho.js` | Lógica e calculadora do OceanEcho |
+
+---
+
+## 🛠️ Ajustes de Responsividade & Animações (Notas do Pedro)
+
+Dei um tapa geral na responsividade e adicionei umas animações bem fluidas para deixar o site com cara de premium. Aqui está um resumo do que fiz:
+
+### Responsividade (Fim da rolagem lateral)
+* **Conserto do bug do celular**: Algumas partes (como a galeria de imagens e os cartões de estatísticas) usavam tamanhos fixos mínimos em pixels. Em telas menores de 360px, isso esticava o site para o lado e quebrava tudo. Ajustei para usar a fórmula `minmax(min(100%, Xpx), 1fr)`, o que garante que a grade encolha dinamicamente de acordo com a tela do celular.
+* **Espaço na calculadora (OceanEcho)**: Reduzi os paddings internos gigantes dos cartões e do formulário no mobile (foi para 20px no tablet e 15px em telas pequenas). Assim, os inputs e o botão de calcular têm espaço para respirar sem ficar tudo esmagado e cortado na direita.
+* **Menu Drawer Limpo**: Refatorei o menu móvel. Antes ele era escondido jogando `right: -100%`, o que às vezes bugava o navegador do celular criando barras de rolagem invisíveis. Agora ele fica em `right: 0` e entra suave usando `transform: translateX(100%)` (aceleração por hardware).
+* **Consistência**: Repliquei todos os ajustes de prevenção de overflow tanto no `style_oceanecho.css` quanto no `style.css` para que os dois ecossistemas (Mata Atlântica e Oceanos) fiquem 100% alinhados e sem nenhuma quebra visual.
+
+### Animações CSS (Micro-interações fluidas)
+Para dar aquela sensação de "site vivo" e premium, apliquei várias transições e animações no CSS puro:
+* **Efeito Vidro / Glassmorphism**: O design do OceanEcho tem um efeito translúcido bem moderno no header e nos cards, com blur no fundo.
+* **Efeito Hover nas Imagens**: Na galeria, ao passar o mouse por cima de uma imagem, ela dá um zoom leve e bem suave (`scale(1.08)`) com transição de curva Bézier, e a legenda sobe de baixo revelando a descrição da foto com opacidade gradativa.
+* **Animações de Entrada**: Usei keyframes customizados como `@keyframes fadeIn` e `@keyframes surgir` para fazer com que os resultados da calculadora de plástico e o placar final do quiz apareçam subindo de forma suave na tela, em vez de simplesmente "brotarem" do nada.
+* **Feedbacks de Movimento**: Adicionei pequenas transições de movimentação nos botões principais (`translateY(-3px)`) e nos cards informativos de ameaças (`translateX(5px)`) ao passar o mouse, dando um retorno visual super interativo.
