@@ -1,0 +1,51 @@
+BIOATLÂNTICA: PORTAL EDUCATIVO E JOGO 3D
+
+
+SOBRE O PROJETO
+
+Projeto desenvolvido para a disciplina de Usabilidade e Design Web (Semestre 2026/1, IBMR), sob orientação dos professores Flávia Balbino e Rogério Pinheiro.
+
+O objetivo é criar um portal educativo que apresenta um jogo 3D imersivo, desenvolvido em Unity, no qual o jogador assume o papel de um biólogo explorando a Mata Atlântica.
+
+
+O PROBLEMA
+
+O ensino de ecologia e preservação ambiental costuma ser limitado a métodos passivos, como livros e vídeos estáticos. Isso causa falta de engajamento dos alunos e dificuldade de entender a real escala e biodiversidade de biomas como a Mata Atlântica.
+
+
+NOSSA SOLUÇÃO
+
+Um portal web educativo que apresenta um jogo 3D imersivo. Nele, o usuário assume o papel de um biólogo que explora uma floresta densa, atravessa rios e pontes e cataloga espécies em tempo real, tornando o aprendizado uma experiência mais ativa.
+
+
+INTEGRANTES DO GRUPO
+
+Rafael Couto (RA 1262323191)
+Pablo Gomide (RA 12625124922)
+Pedro Gomes (RA 1262328800)
+
+
+TECNOLOGIAS UTILIZADAS
+
+O portal web foi construído com HTML5, CSS3 e JavaScript. O jogo 3D apresentado no portal foi desenvolvido na engine Unity, transformando o aprendizado sobre a Mata Atlântica em uma experiência interativa.
+
+
+IDENTIDADE VISUAL
+
+O site segue uma paleta de cores inspirada na natureza, com tons de verde que remetem à floresta e à vegetação, além de um dourado âmbar usado em destaques e detalhes especiais. Essas cores aparecem no cabeçalho, no rodapé, nos botões, nos links e nos ícones do portal, dando uma identidade visual única ao projeto.
+
+
+DESENVOLVIMENTO
+
+Durante o desenvolvimento do site, cada integrante ficou responsável por uma frente do trabalho.
+
+Pedro Gomes cuidou da parte visual de animações e dos elementos interativos do portal, como menus e efeitos ao passar o mouse pelos itens da página. O objetivo foi dar mais vida ao site e tornar a navegação mais agradável e fluida para o usuário.
+
+Pablo Gomide ficou responsável por ajustar a responsividade do site, ou seja, garantir que o portal funcionasse bem tanto no computador quanto no celular e no tablet. Também trabalhou na criação e organização das seções que compõem as páginas do portal.
+
+Rafael Couto cuidou do conteúdo e dos materiais usados nas páginas, reunindo e organizando textos, imagens e informações sobre a Mata Atlântica e os temas ambientais apresentados no site.
+
+
+MATERIAIS UTILIZADOS
+
+Todas as imagens e vídeos usados no portal são de uso livre. As fotos foram retiradas do site Pexels, que oferece banco de imagens gratuito e sem necessidade de atribuição. O vídeo utilizado é um conteúdo educativo de domínio público, disponível no YouTube.
