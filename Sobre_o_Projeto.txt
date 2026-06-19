@@ -3,7 +3,7 @@ BIOATLÂNTICA: PORTAL EDUCATIVO E JOGO 3D
 
 SOBRE O PROJETO
 
-Projeto desenvolvido para a disciplina de Usabilidade e Design Web (Semestre 2026/1, IBMR), sob orientação dos professores Flávia Balbino e Rogério Pinheiro.
+Projeto desenvolvido para a disciplina de Usabilidade e Design Web, no IBMR, sob orientação dos professores Flávia Balbino e Rogério Pinheiro.
 
 O objetivo é criar um portal educativo que apresenta um jogo 3D imersivo, desenvolvido em Unity, no qual o jogador assume o papel de um biólogo explorando a Mata Atlântica.
 
@@ -18,21 +18,39 @@ NOSSA SOLUÇÃO
 Um portal web educativo que apresenta um jogo 3D imersivo. Nele, o usuário assume o papel de um biólogo que explora uma floresta densa, atravessa rios e pontes e cataloga espécies em tempo real, tornando o aprendizado uma experiência mais ativa.
 
 
+PRINCIPAIS ATRAÇÕES
+
+O portal reúne duas atrações interativas, uma em cada área temática, com o mesmo propósito de aproximar o visitante da causa ambiental em vez de apenas apresentar informações soltas.
+
+Na área da Mata Atlântica, o destaque é o quiz sobre a fauna e a flora do bioma. A cada pergunta respondida, o portal mostra uma explicação sobre o tema, reforçando o aprendizado mesmo quando a resposta está errada, e termina com um resultado que reflete o quanto a pessoa absorveu sobre a importância da preservação.
+
+Na área dos oceanos, o destaque é a calculadora de impacto plástico. O visitante informa hábitos simples do dia a dia, como o uso de copos, sacolas e garrafas descartáveis, e recebe uma estimativa do quanto isso representa em descarte ao longo do tempo, junto de dicas práticas para reduzir esse impacto.
+
+Mais do que ferramentas isoladas, essas duas atrações existem para transformar a conscientização ambiental em algo que o visitante experimenta na prática, e não apenas lê.
+
+
 INTEGRANTES DO GRUPO
 
-Rafael Couto (RA 1262323191)
-Pablo Gomide (RA 12625124922)
-Pedro Gomes (RA 1262328800)
+Rafael Couto, RA 1262323191
+Pablo Gomide, RA 12625124922
+Pedro Gomes, RA 1262328800
 
 
 TECNOLOGIAS UTILIZADAS
 
-O portal web foi construído com HTML5, CSS3 e JavaScript. O jogo 3D apresentado no portal foi desenvolvido na engine Unity, transformando o aprendizado sobre a Mata Atlântica em uma experiência interativa.
+O portal web foi construído com HTML5, CSS3 e JavaScript
 
 
 IDENTIDADE VISUAL
 
 O site segue uma paleta de cores inspirada na natureza, com tons de verde que remetem à floresta e à vegetação, além de um dourado âmbar usado em destaques e detalhes especiais. Essas cores aparecem no cabeçalho, no rodapé, nos botões, nos links e nos ícones do portal, dando uma identidade visual única ao projeto.
+
+
+COMO O PROJETO FOI ORGANIZADO
+
+O portal foi dividido em páginas separadas para cada ecossistema apresentado. A página inicial funciona como um ponto de partida, levando o visitante para a área dedicada à Mata Atlântica ou para a área dedicada aos oceanos. Cada uma dessas áreas tem sua própria folha de estilos e seu próprio arquivo de comportamento, o que manteve o código mais organizado e permitiu que cada integrante avançasse em sua parte sem travar o trabalho dos colegas.
+
+Para acompanhar as mudanças ao longo do desenvolvimento, o grupo utilizou o Git e o GitHub como ferramentas de controle de versão. Antes de alterar qualquer arquivo, cada integrante criava sua própria linha de trabalho separada da versão principal do site, o que evitava conflitos entre o que cada um estava produzindo ao mesmo tempo. Depois de concluir uma parte, a pessoa enviava suas alterações para revisão dos demais antes de incorporá-las à versão final, garantindo que o portal se mantivesse estável durante todo o processo.
 
 
 DESENVOLVIMENTO
@@ -45,7 +63,14 @@ Pablo Gomide ficou responsável por ajustar a responsividade do site, ou seja, g
 
 Rafael Couto cuidou do conteúdo e dos materiais usados nas páginas, reunindo e organizando textos, imagens e informações sobre a Mata Atlântica e os temas ambientais apresentados no site.
 
+Depois que a primeira versão do portal ficou pronta, o grupo passou por uma rodada de ajustes finos: foram corrigidos problemas de responsividade e de rolagem horizontal indevida em telas pequenas, além de pequenos refinamentos nas animações para deixar a navegação mais fluida em qualquer dispositivo.
+
 
 MATERIAIS UTILIZADOS
 
 Todas as imagens e vídeos usados no portal são de uso livre. As fotos foram retiradas do site Pexels, que oferece banco de imagens gratuito e sem necessidade de atribuição. O vídeo utilizado é um conteúdo educativo de domínio público, disponível no YouTube.
+
+
+FONTES DE INFORMAÇÃO
+
+As informações sobre a Mata Atlântica e sobre a situação dos oceanos apresentadas no portal têm como base dados e publicações de órgãos oficiais do governo brasileiro, como o Ministério do Meio Ambiente e Mudança do Clima, o Instituto Chico Mendes de Conservação da Biodiversidade e o Instituto Brasileiro de Geografia e Estatística. Essas instituições reúnem dados públicos sobre biomas, espécies ameaçadas e conservação ambiental, disponíveis nos sites gov.br/mma, gov.br/icmbio e ibge.gov.br.

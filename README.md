@@ -51,6 +51,16 @@ Todas as imagens e vídeos usados no portal são de uso livre:
 
 ---
 
+## Fontes de Informação
+
+As informações sobre a Mata Atlântica e sobre a situação dos oceanos apresentadas no portal têm como base dados e publicações de órgãos oficiais do governo brasileiro:
+
+- **Ministério do Meio Ambiente e Mudança do Clima** ([gov.br/mma](https://www.gov.br/mma))
+- **Instituto Chico Mendes de Conservação da Biodiversidade (ICMBio)** ([gov.br/icmbio](https://www.gov.br/icmbio))
+- **Instituto Brasileiro de Geografia e Estatística (IBGE)** ([ibge.gov.br](https://www.ibge.gov.br))
+
+---
+
 ## Como Contribuir (Guia para o Grupo)
 
 ### 1. Clonar o repositório

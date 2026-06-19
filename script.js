@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /* ============================================================
-       Menu Mobile
-       ============================================================ */
+    /* menu do celular */
     const btnMenu  = document.getElementById("btn-menu");
     const navbar   = document.getElementById("navbar");
     const navLinks = document.querySelectorAll(".nav-link");
@@ -22,9 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /* ============================================================
-       Destaque do link ativo ao rolar
-       ============================================================ */
+    /* destaca o link ativo enquanto a página rola */
     const secoes = document.querySelectorAll("section[id]");
 
     window.addEventListener("scroll", () => {
@@ -43,10 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /* ============================================================
-       Quiz Interativo — Mata Atlântica
-       Indicador de resultado: retenção de conhecimento via quizzes
-       ============================================================ */
+    /* quiz sobre a Mata Atlântica, usado para medir o quanto o usuário aprendeu */
     const perguntas = [
         {
             pergunta: "Qual porcentagem da Mata Atlântica original ainda existe hoje?",
@@ -64,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
             pergunta: "Quantas espécies de plantas são encontradas exclusivamente na Mata Atlântica?",
             opcoes: ["Mais de 500", "Cerca de 2.000", "Mais de 8.000", "Cerca de 4.000"],
             correta: 2,
-            explicacao: "A Mata Atlântica abriga mais de 8.000 espécies de plantas endêmicas — encontradas apenas neste bioma. Isso a torna uma das regiões com maior biodiversidade vegetal do mundo."
+            explicacao: "A Mata Atlântica abriga mais de 8.000 espécies de plantas endêmicas, encontradas apenas neste bioma. Isso a torna uma das regiões com maior biodiversidade vegetal do mundo."
         },
         {
             pergunta: "Qual é a principal causa histórica do desmatamento da Mata Atlântica?",
@@ -76,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             pergunta: "Como a Mata Atlântica é reconhecida internacionalmente pela ciência?",
             opcoes: ["Reserva da Biosfera Global", "Hotspot de Biodiversidade", "Parque Natural Mundial", "Zona de Proteção Climática"],
             correta: 1,
-            explicacao: "A Mata Atlântica é um dos 36 Hotspots de Biodiversidade do planeta — áreas com altíssima concentração de espécies endêmicas e sob grave ameaça humana. Essa classificação prioriza esforços globais de conservação."
+            explicacao: "A Mata Atlântica é um dos 36 Hotspots de Biodiversidade do planeta, áreas com altíssima concentração de espécies endêmicas e sob grave ameaça humana. Essa classificação prioriza esforços globais de conservação."
         }
     ];
 
@@ -123,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const botoes  = elOpcoes.querySelectorAll(".opcao-btn");
         const acertou = indiceEscolhido === atual.correta;
 
-        // Desabilita todos os botões
+        // desabilita os botões depois de responder
         botoes.forEach((btn, i) => {
             btn.disabled = true;
             if (i === atual.correta) btn.classList.add("correta");
@@ -136,13 +129,13 @@ document.addEventListener("DOMContentLoaded", () => {
             btnClicado.classList.add("errada");
         }
 
-        // Mostra explicação
+        // mostra a explicação da resposta
         elFeedbackTexto.textContent = atual.explicacao;
         elFeedback.className = acertou
             ? "quiz-feedback"
             : "quiz-feedback feedback-erro";
 
-        // Botão de avançar
+        // texto do botão de avançar
         const ehUltima = indicePergunta === perguntas.length - 1;
         elBtnProxima.textContent = ehUltima
             ? "Ver Resultado"
@@ -177,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
             msg    = "Você tem uma base sólida sobre a Mata Atlântica. Explore o jogo para aprofundar ainda mais seu aprendizado!";
         } else {
             titulo = "Continue Aprendendo!";
-            msg    = "A Mata Atlântica tem muito a te ensinar! Revise os conteúdos do portal e tente novamente — você vai melhorar.";
+            msg    = "A Mata Atlântica tem muito a te ensinar! Revise os conteúdos do portal e tente novamente, você vai melhorar.";
         }
 
         document.getElementById("resultado-titulo").textContent = titulo;
@@ -193,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
         carregarPergunta();
     });
 
-    // Inicializa o quiz
+    // começa o quiz
     carregarPergunta();
 
 });

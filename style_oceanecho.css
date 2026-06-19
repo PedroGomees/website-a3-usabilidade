@@ -1,6 +1,4 @@
-/* ==========================================================================
-   CSS Reset & Variáveis de Design
-   ========================================================================== */
+/* reset básico e variáveis de cor */
 :root {
     --bg-dark: #060b13;
     --bg-dark-gray: #0b1523;
@@ -39,9 +37,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ==========================================================================
-   Layout & Container
-   ========================================================================== */
+/* layout e container */
 .container {
     width: 90%;
     max-width: var(--container-width);
@@ -49,9 +45,7 @@ body {
     padding: 0 15px;
 }
 
-/* ==========================================================================
-   Componentes Globais (Botoes e Cards)
-   ========================================================================== */
+/* botões e cards usados em várias partes do site */
 .card {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
@@ -108,9 +102,7 @@ body {
     margin: 20px 0;
 }
 
-/* ==========================================================================
-   Cabeçalho e Navegação (Glassmorphism)
-   ========================================================================== */
+/* cabeçalho e menu, com aquele efeito de vidro */
 .main-header {
     position: fixed;
     top: 0;
@@ -195,9 +187,7 @@ body {
     width: 100%;
 }
 
-/* ==========================================================================
-   Hero Section
-   ========================================================================== */
+/* hero, a primeira seção da página */
 .hero-section {
     position: relative;
     min-height: 100vh;
@@ -279,9 +269,7 @@ body {
     fill: var(--bg-dark);
 }
 
-/* ==========================================================================
-   Seção de Estatísticas
-   ========================================================================== */
+/* seção das estatísticas */
 .stats-section {
     padding: 60px 0;
     background-color: var(--bg-dark);
@@ -323,9 +311,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* ==========================================================================
-   Seção de Conteúdo (Cards & Sidebar)
-   ========================================================================== */
+/* seção de conteúdo, com os cards e a barra lateral */
 .info-section {
     padding: 80px 0;
     scroll-margin-top: 80px;
@@ -428,9 +414,7 @@ body {
     top: -3px;
 }
 
-/* ==========================================================================
-   Seção Calculadora (Interativa)
-   ========================================================================== */
+/* seção da calculadora interativa */
 .calculator-section {
     padding: 80px 0;
     background: linear-gradient(180deg, var(--bg-dark), var(--bg-dark-gray));
@@ -582,9 +566,7 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ==========================================================================
-   Galeria de Mídia (Grid de Imagens Responsivo)
-   ========================================================================== */
+/* galeria de imagens */
 .gallery-section {
     padding: 80px 0;
     scroll-margin-top: 80px;
@@ -651,9 +633,7 @@ body {
     opacity: 1;
 }
 
-/* ==========================================================================
-   Rodapé (Footer)
-   ========================================================================== */
+/* rodapé */
 .main-footer {
     background: var(--bg-dark-gray);
     border-top: 1px solid var(--glass-border);
@@ -701,9 +681,7 @@ body {
     color: var(--text-muted);
 }
 
-/* ==========================================================================
-   Responsividade (Media Queries)
-   ========================================================================== */
+/* ajustes para telas menores */
 @media (max-width: 992px) {
     .info-layout {
         grid-template-columns: 1fr;
@@ -720,7 +698,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Menu Mobile Drawer */
+    /* menu lateral do celular */
     .menu-toggle {
         display: block;
     }

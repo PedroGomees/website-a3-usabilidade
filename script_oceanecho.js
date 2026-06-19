@@ -1,6 +1,4 @@
-/* ==========================================================================
-   Controle de Menu Responsivo (Mobile Drawer)
-   ========================================================================== */
+/* controle do menu no celular */
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById("menu-toggle-btn");
     const navbar = document.getElementById("navbar-nav");
@@ -14,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Fechar menu mobile ao clicar em um link
+    // fecha o menu ao clicar em um link
     navLinks.forEach(link => {
         link.addEventListener("click", () => {
             if (navbar && navbar.classList.contains("open")) {
@@ -26,9 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /* ==========================================================================
-       Destaque do Link Ativo ao Rolar a Página
-       ========================================================================== */
+    /* destaca o link ativo enquanto a página rola */
     const sections = document.querySelectorAll("section");
 
     window.addEventListener("scroll", () => {
@@ -49,9 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    /* ==========================================================================
-       Lógica da Calculadora de Impacto nos Oceanos (JavaScript Interativo)
-       ========================================================================== */
+    /* calculadora de impacto nos oceanos */
     const btnCalcular = document.getElementById("btn-calcular");
     const calcResults = document.getElementById("calc-results");
     const weightResult = document.getElementById("weight-result");
@@ -60,47 +54,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (btnCalcular) {
         btnCalcular.addEventListener("click", () => {
-            // Pegar valores dos inputs
+            // pega o que a pessoa preencheu
             const copos = parseFloat(document.getElementById("input-copos").value) || 0;
             const sacolas = parseFloat(document.getElementById("input-sacolas").value) || 0;
             const garrafas = parseFloat(document.getElementById("input-garrafas").value) || 0;
 
-            // Fatores de peso médio unitário estimado em Kg
-            const pesoCopo = 0.015; // 15 gramas
-            const pesoSacola = 0.008; // 8 gramas
-            const pesoGarrafa = 0.025; // 25 gramas
+            // peso médio estimado de cada item, em kg
+            const pesoCopo = 0.015; // peso de um copo
+            const pesoSacola = 0.008; // peso de uma sacola
+            const pesoGarrafa = 0.025; // peso de uma garrafa
 
-            // Cálculo semanal e anual (52 semanas)
+            // soma da semana e estimativa para o ano
             const totalSemanal = (copos * pesoCopo) + (sacolas * pesoSacola) + (garrafas * pesoGarrafa);
             const totalAnual = totalSemanal * 52;
 
-            // Exibir valores calculados
+            // mostra o resultado calculado
             weightResult.textContent = totalAnual.toFixed(2);
 
-            // Determinar classificação e recomendações
-            ratingBadge.className = "rating-badge"; // reset classes
-            
+            // decide a classificação e a dica que vai aparecer
+            ratingBadge.className = "rating-badge"; // limpa as classes antigas
+
             if (totalAnual < 5.0) {
-                // Impacto Baixo (Verde)
+                // impacto baixo, fica verde
                 ratingBadge.classList.add("green");
                 ratingBadge.textContent = "Impacto Baixo";
                 tipsText.textContent = "Excelente! Seus hábitos ajudam a preservar os ecossistemas marinhos. Continue minimizando o consumo e descarte consciente.";
             } else if (totalAnual >= 5.0 && totalAnual <= 15.0) {
-                // Impacto Médio (Amarelo)
+                // impacto médio, fica amarelo
                 ratingBadge.classList.add("yellow");
                 ratingBadge.textContent = "Impacto Moderado";
                 tipsText.textContent = "Bom, mas pode melhorar. Tente substituir copos plásticos por copos térmicos e leve sacolas retornáveis ao supermercado.";
             } else {
-                // Impacto Alto (Vermelho)
+                // impacto alto, fica vermelho
                 ratingBadge.classList.add("red");
                 ratingBadge.textContent = "Impacto Alto";
                 tipsText.textContent = "Alerta! Seu descarte estimado é alto e prejudica a fauna marinha. Considere substituir plásticos descartáveis por alternativas ecológicas reutilizáveis imediatamente.";
             }
 
-            // Exibir container de resultados com animação suave
+            // mostra o resultado na tela
             calcResults.classList.remove("hidden");
-            
-            // Rolagem suave até o resultado
+
+            // rola a página até o resultado
             calcResults.scrollIntoView({ behavior: "smooth", block: "nearest" });
         });
     }

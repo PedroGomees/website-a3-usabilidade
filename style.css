@@ -1,6 +1,4 @@
-/* ============================================================
-   Variáveis e Reset
-   ============================================================ */
+/* cores usadas no site e reset básico */
 :root {
     --verde-escuro:  #1a4d2e;
     --verde-medio:   #2d8653;
@@ -36,9 +34,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ============================================================
-   Container
-   ============================================================ */
+/* container padrão usado nas seções */
 .container {
     width: 90%;
     max-width: 1150px;
@@ -46,9 +42,7 @@ body {
     padding: 0 15px;
 }
 
-/* ============================================================
-   Botões
-   ============================================================ */
+/* botões */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -91,9 +85,7 @@ body {
     justify-content: center;
 }
 
-/* ============================================================
-   Cabeçalho
-   ============================================================ */
+/* cabeçalho */
 #cabecalho {
     position: fixed;
     top: 0;
@@ -160,16 +152,14 @@ body {
     border-bottom-color: var(--verde-claro);
 }
 
-/* ============================================================
-   Hero — Game Landing Page
-   ============================================================ */
+/* hero, a primeira parte da página com a chamada para o jogo */
 .hero {
     position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
     padding-top: 70px;
-    /* Foto CC0 de floresta tropical — Pexels (licença gratuita) */
+    /* foto de floresta tropical do banco Pexels, uso livre */
     background: url('https://images.pexels.com/photos/957024/pexels-photo-957024.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80')
                 no-repeat center center / cover;
 }
@@ -226,9 +216,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* ============================================================
-   Estatísticas
-   ============================================================ */
+/* seção de estatísticas */
 .secao-stats {
     background-color: var(--verde-escuro);
     padding: 50px 0;
@@ -259,9 +247,7 @@ body {
     opacity: 0.8;
 }
 
-/* ============================================================
-   Título de Seção
-   ============================================================ */
+/* título usado no topo de cada seção */
 .secao-titulo {
     text-align: center;
     max-width: 640px;
@@ -280,9 +266,7 @@ body {
     font-size: 1rem;
 }
 
-/* ============================================================
-   O Problema
-   ============================================================ */
+/* seção do problema */
 .secao-problema {
     padding: 80px 0;
     background-color: var(--fundo-branco);
@@ -331,9 +315,7 @@ body {
     color: var(--texto-suave);
 }
 
-/* ============================================================
-   O Jogo
-   ============================================================ */
+/* seção do jogo */
 .secao-jogo {
     padding: 80px 0;
     background-color: var(--fundo);
@@ -361,7 +343,7 @@ body {
     object-fit: cover;
 }
 
-/* HUD fictício sobre a imagem */
+/* hud fictício em cima da imagem do jogo */
 .screenshot-hud {
     position: absolute;
     bottom: 0;
@@ -440,9 +422,7 @@ body {
     font-size: 0.85rem;
 }
 
-/* ============================================================
-   Seção de Vídeo
-   ============================================================ */
+/* seção do vídeo */
 .secao-video {
     padding: 80px 0;
     background-color: var(--verde-escuro);
@@ -484,9 +464,7 @@ body {
     color: var(--texto-suave);
 }
 
-/* ============================================================
-   Quiz Interativo
-   ============================================================ */
+/* quiz interativo */
 .secao-quiz {
     padding: 80px 0;
     background-color: var(--fundo-branco);
@@ -585,7 +563,7 @@ body {
     display: none;
 }
 
-/* Resultado final */
+/* resultado final do quiz */
 .quiz-resultado {
     text-align: center;
     padding: 20px 0;
@@ -623,9 +601,7 @@ body {
     margin-bottom: 24px;
 }
 
-/* ============================================================
-   Galeria
-   ============================================================ */
+/* galeria de fotos */
 .secao-galeria {
     padding: 80px 0;
     background-color: var(--fundo);
@@ -679,9 +655,7 @@ body {
     color: var(--texto-suave);
 }
 
-/* ============================================================
-   Rodapé
-   ============================================================ */
+/* rodapé */
 #rodape {
     background-color: var(--verde-escuro);
     color: rgba(255, 255, 255, 0.85);
@@ -737,17 +711,13 @@ body {
     opacity: 0.6;
 }
 
-/* ============================================================
-   Animação
-   ============================================================ */
+/* animações */
 @keyframes surgir {
     from { opacity: 0; transform: translateY(8px); }
     to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ============================================================
-   Responsividade
-   ============================================================ */
+/* ajustes para telas menores */
 @media (max-width: 900px) {
     .jogo-layout {
         grid-template-columns: 1fr;
